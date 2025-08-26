@@ -42,11 +42,14 @@ login_manager.login_view = 'index'
 @login_manager.user_loader
 def load_user(user_id):
     from models import User, Company
-    # Try to load as user first, then as company
-    user = User.query.get(user_id)
-    if user:
-        return user
-    return Company.query.get(user_id)
+    # Parse the user_id to determine type and actual ID
+    if user_id.startswith('user_'):
+        actual_id = int(user_id.replace('user_', ''))
+        return User.query.get(actual_id)
+    elif user_id.startswith('company_'):
+        actual_id = int(user_id.replace('company_', ''))
+        return Company.query.get(actual_id)
+    return None
 
 # Create upload directory
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
