@@ -203,22 +203,12 @@ pip install -e .
 4. Add tests if applicable
 5. Submit a pull request
 
-## 📝 License
 
-This project is created for educational purposes. Please review and add appropriate licensing as needed.
-
-## 🔮 Future Enhancements
-
-- Integration with real blockchain networks
-- Email notifications for certificate sharing
-- Advanced user role management
-- Certificate templates and validation
-- API endpoints for external integrations
-- Mobile-responsive improvements
 
 ## 📞 Support
 
 For questions or issues, please create an issue in the GitHub repository or contact the development team.
+Email: raiv5253@gmail.com
 
 ---
 
